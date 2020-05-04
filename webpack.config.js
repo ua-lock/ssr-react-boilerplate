@@ -1,5 +1,6 @@
 const path = require('path'),
-  nodeExternals = require('webpack-node-externals')
+  nodeExternals = require('webpack-node-externals'),
+  MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = [
   // Backend
@@ -45,6 +46,35 @@ module.exports = [
           test: /\.js$/,
           exclude: /node-modules/,
           loader: 'babel-loader',
+        },
+      ],
+    },
+  },
+  // Stylesheets
+  {
+    mode: 'development',
+    entry: {
+      style: './views/main.css',
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: 'style.bundle.css',
+        chunkFilename: '[id]_chunk.css',
+      }),
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
+            {
+              loader: 'css-loader',
+            },
+          ],
         },
       ],
     },

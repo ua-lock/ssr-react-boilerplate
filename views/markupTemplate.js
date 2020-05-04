@@ -6,6 +6,7 @@ const markupTemplate = (hydration) => {
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="Server-side rendered React PWA">
+        <link rel="stylesheet" href="/style.bundle.css">
         <title>SSR React PWA</title>
         </head>
         <body>
@@ -15,6 +16,6 @@ const markupTemplate = (hydration) => {
         </html>
         `
 }
-          //<link rel="stylesheet" href="/style.bundle.css">
+          
 
 export default markupTemplate

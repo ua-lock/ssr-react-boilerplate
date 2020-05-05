@@ -103,7 +103,7 @@ const Saturn = () => {
       </ul>
       <small>
         Facts taken from{' '}
-        <a href='https://space-facts.com/' rel='noreferrer'>
+        <a href='https://space-facts.com/' rel='noreferrer' target='_blank'>
           space-facts
         </a>
         .

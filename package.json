@@ -1,14 +1,14 @@
 {
   "name": "ssr-react",
   "version": "1.0.0",
-  "description": "React frontend rendered pre-rendered on a Express server",
+  "description": "React frontend pre-rendered on a Express server",
   "main": "server.js",
-  "author": "ua-lock",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"webpack -w\" \"nodemon ./dist/server.bundle.js\""
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

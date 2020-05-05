@@ -2,6 +2,7 @@ import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter, matchPath } from 'react-router-dom'
+import compression from 'compression'
 
 // --- Modules
 import markupTemplate from './views/markupTemplate'
@@ -11,6 +12,7 @@ import routes from './routes'
 const app = express()
 const PORT = process.env.PORT || 5454
 app.use(express.static(__dirname))
+app.use(compression())
 
 app.get('/favicon.ico', (req, res) => res.end())
 

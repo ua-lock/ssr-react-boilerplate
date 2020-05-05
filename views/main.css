@@ -1,3 +1,5 @@
-body {
-  background: red;
+@import './light.min.css';
+
+.capitalize {
+  text-transform: capitalize;
 }

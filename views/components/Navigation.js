@@ -9,7 +9,7 @@ const Navigation = () => {
         {routes.map(({ path }) => {
           if (path == '/') return null
           return (
-            <li key={path}>
+            <li className='capitalize' key={path}>
               <Link to={path}>{path.substring(1)}</Link>
             </li>
           )
